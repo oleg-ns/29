@@ -6,7 +6,7 @@ document.querySelector('ul').addEventListener('click', function (event) {
 });
 
 document.querySelector('button').addEventListener('click', function (event) {
-    if (document.querySelector('input').value == '' && document.getElementById('delete').checked == false) {
+    if (document.querySelector('input').value == '') {
         document.querySelector('input').style.borderColor='red', alert("Can't create element without name")};
      if (document.querySelector('input').value != '' && document.getElementById('delete').checked == false) {
          var newLi = document.createElement('li');
@@ -15,7 +15,7 @@ document.querySelector('button').addEventListener('click', function (event) {
          newLi.className = 'list-group-item'
          document.querySelector('input').value = ''
      }
-    if (document.querySelector('input').value != null && document.getElementById('delete').checked) {
+    if (document.querySelector('input').value != '' && document.getElementById('delete').checked) {
         var newLi = document.createElement('li');
         newLi.innerHTML = document.querySelector('input').value;
         document.querySelector('ul').appendChild(newLi)
